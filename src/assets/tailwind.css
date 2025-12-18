@@ -8,3 +8,12 @@
     @tailwind components;
     @tailwind utilities;
 }
+
+.primary {
+    background-color: #076633;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
