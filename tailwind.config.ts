@@ -5,13 +5,20 @@ export default {
     content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     theme: {
         screens: {
+            xs:'500px',
             sm: '576px',
             md: '768px',
             lg: '992px',
             xl: '1200px',
             '2xl': '1560px',
             '3xl': '1920px'
+        },
+        extend: {
+          fontFamily: {
+            sans: ['Roboto', 'system-ui', 'sans-serif']
         }
+      }
     },
+
     plugins: [require('tailwindcss-primeui')]
-} satisfies Config;
+    } satisfies Config;

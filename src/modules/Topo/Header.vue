@@ -1,6 +1,6 @@
 <template>
   <header class="header bg-[#076633] p-2 md:p-4">
-    <div class="container-1170">
+    <div class="container">
       <div class="flex flex-wrap justify-center md:justify-around gap-2 text-gray-300 text-sm md:text-base">
         <p>Avenida Cerro Azul - Jardim Horizonte</p>
         <p>(44) 9 9909-0909</p>
@@ -10,6 +10,3 @@
     </div>
   </header>
 </template>
-
-<script setup lang="ts">
-</script>
