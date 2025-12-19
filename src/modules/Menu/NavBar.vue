@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar secundary">
+  <nav class="navbar secundary animate-slide-in-left opacity-0 delay-200">
     <div class="container">
       <div class="flex items-center justify-between text-white p-3">
         <div class="hidden md:flex justify-around gap-4 w-full">

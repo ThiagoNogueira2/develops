@@ -27,7 +27,6 @@ export interface Servico {
   icone: string
 }
 
-// Mapeamento de ícones
 const iconMap: Record<string, any> = {
   Eye,
   FileText,

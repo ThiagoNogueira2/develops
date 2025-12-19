@@ -1,5 +1,5 @@
 <template>
-  <header class="header bg-[#076633] p-2 md:p-4">
+  <header class="header bg-[#076633] p-2 md:p-4 animate-slide-in-left opacity-0 delay-0">
     <div class="container">
       <div class="flex flex-wrap justify-center md:justify-around gap-2 text-gray-300 text-sm md:text-base">
         <p>Avenida Cerro Azul - Jardim Horizonte</p>

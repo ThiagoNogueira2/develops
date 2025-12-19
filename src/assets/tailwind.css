@@ -17,7 +17,103 @@
   }
 }
 
+@layer utilities {
 
+  .animate-ready {
+    opacity: 0;
+  }
+  .delay-0 { animation-delay: 0ms; }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-150 { animation-delay: 150ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+  .delay-800 { animation-delay: 800ms; }
+  .delay-900 { animation-delay: 900ms; }
+  .delay-1000 { animation-delay: 1000ms; }
+  .delay-1200 { animation-delay: 1200ms; }
+  .delay-1400 { animation-delay: 1000ms; }
+  .delay-1600 { animation-delay: 1600ms; }
+  .delay-1800 { animation-delay: 1800ms; }
+  .delay-2000 { animation-delay: 2000ms; }
+
+  
+  .duration-400 { animation-duration: 400ms; }
+  .duration-600 { animation-duration: 600ms; }
+  .duration-800 { animation-duration: 800ms; }
+  .duration-1000 { animation-duration: 1000ms; }
+
+
+  .animate-on-scroll {
+    opacity: 0;
+  }
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+  }
+}
+
+
+@layer components {
+
+  .section-enter {
+    @apply animate-fade-in-up;
+    opacity: 0;
+  }
+
+ 
+  .card-enter {
+    @apply animate-zoom-in-soft;
+    opacity: 0;
+  }
+
+
+  .text-reveal {
+    @apply animate-blur-in;
+    opacity: 0;
+  }
+
+  
+  .list-item-enter {
+    @apply animate-stagger-in;
+    opacity: 0;
+  }
+
+ 
+  .nav-enter {
+    @apply animate-slide-in-down;
+    opacity: 0;
+  }
+
+
+  .sidebar-enter {
+    @apply animate-slide-in-left;
+    opacity: 0;
+  }
+
+ 
+  .alternate-left {
+    @apply animate-slide-in-left;
+    opacity: 0;
+  }
+
+  .alternate-right {
+    @apply animate-slide-in-right;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 .primary {
   background-color: #076633;
@@ -28,8 +124,9 @@
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1400px;
   margin: 0 auto;
+  ;
 }
 
 @keyframes logo-section-enter {

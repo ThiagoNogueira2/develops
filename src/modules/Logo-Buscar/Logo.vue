@@ -1,9 +1,10 @@
 <template>
-  <section class="primary">
+  <section class="primary   animate-slide-in-left">
+    
     <div class="container pb-5 flex justify-between items-center flex-col gap-4 md:flex-row md:gap-0
-             animate-[logo-section-enter_0.5s_ease-out_forwards]">
+             animate-slide-in-left opacity-0 delay-100">
 
-      <div class="flex items-center gap-4 md:gap-6 w-full md:w-auto">
+      <div class="flex items-center gap-4 md:gap-6 w-full md:w-auto justify-center">
 
         <img src="../../assets/images/brasao.png" alt="Brasão da Cidade"
           class="w-42  lg:w-38 transition-transform flex-shrink-0">
