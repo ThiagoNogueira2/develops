@@ -2,7 +2,7 @@
   <section class="acesso-rapido">
     <div class="container pt-16 flex justify-center">
       <h1 class="text-4xl text-[#118D4E]">
-        Acesso <strong class="text-[#076633]">Rápido</strong>
+        ACESSO <strong class="text-[#076633]">RÁPIDO</strong>
       </h1>
     </div>
 
@@ -25,28 +25,29 @@
 
     <div class="container bg-gray-100 p-8 rounded-b-lg">
 
-      <!-- Aba do Serviços Digitais-->
-       <!--Foi inserindo a lógica para coletar o servico in servicoesDigitais, que é um array de objetos, e para cada objeto, foi inserindo a lógica para coletar o nome e o link do servico-->
-      <div v-if="activeTab === 'digital'" class="">
+      <div v-if="activeTab === 'digital'" class="grid grid-cols-8 gap-6">
         <a v-for="servico in servicosDigitais" :key="servico.nome" :href="servico.link" 
-           class=" ">
-          <div class="">
-  
+
+           class="flex flex-col items-center cursor-pointer hover:opacity-80 transition-opacity">
+         
+          <div class="w-20 h-20 bg-white rounded-lg flex items-center justify-center mb-3 shadow-sm">
+            <component :is="getIcon(servico.icone)" :size="33" class="text-[#0B6C3C]" />
           </div>
-          <!-- Foi inserindo a lógica para coletar o nome do servico-->
-           <!-- Podendo utilizar servico.nome, utilizando o types podendo extrair o servico.nome-->
-          <span class="text-sm text-gray-700 text-center leading-tight">{{ servico.nome }}</span>
+
+          <span class="text-sm text-[#0B6C3C] text-center leading-tight font-medium">{{ servico.nome }}</span>
+
         </a>
       </div>
 
-      <!-- Aba do Servidor-->
-      <div v-if="activeTab === 'servidor'" class="">
+      <div v-if="activeTab === 'servidor'" class="grid grid-cols-8 gap-6">
         <a v-for="servico in servicosServidor" :key="servico.nome" :href="servico.link"
-           class=" ">
-          <div class="">
-      
+           class="flex flex-col items-center cursor-pointer hover:opacity-80 transition-opacity">
+         
+          <div class="w-20 h-20 bg-white rounded-lg flex items-center justify-center mb-3 shadow-sm">
+            <component :is="getIcon(servico.icone)" :size="33" class="text-[#0B6C3C]" />
           </div>
-          <span class="text-sm text-gray-700 text-center leading-tight">{{ servico.nome }}</span>
+        
+          <span class="text-sm text-[#0B6C3C] text-center leading-tight font-medium">{{ servico.nome }}</span>
         </a>
       </div>
     </div>
@@ -54,7 +55,7 @@
 
 </template><script setup lang="ts">
 import { ref } from 'vue'
-import { servicosDigitais, servicosServidor } from './types'
+import { servicosDigitais, servicosServidor, getIcon } from './types'
 
 const activeTab = ref<'digital' | 'servidor'>('digital')
 </script>

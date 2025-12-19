@@ -3,8 +3,9 @@
     <Header />
     <Logo :toggleMenu="toggleMenu" />
     <NavBar :isOpen="isMenuOpen" />
-    <Banner />
+    
     <AcessoRapido />
+    <Banner />
     <Noticias />
     <Servicos />
     <Rodape />

@@ -1,27 +1,84 @@
-export const servicosDigitais = [
-    { nome: 'Portal da Transparência', link: '#' },
-    { nome: 'Processos Licitatórios', link: '#' },
-    { nome: 'ITBI Online', link: '#' },
-    { nome: 'Alvará Online', link: '#' },
-    { nome: 'Nota Fiscal Eletrônica', link: '#' },
-    { nome: 'Tributos Web', link: '#' },
-    { nome: 'Ouvidoria', link: '#' },
-    { nome: 'Fale Conosco', link: '#' },
-    { nome: 'Concursos', link: '#' },
-    { nome: 'Sala do empreendedor', link: '#' },
-    { nome: 'Câmara Municipal', link: '#' },
-    { nome: 'Leis Municipais Atos Oficiais', link: '#' },
-    { nome: 'Diário Oficial', link: '#' },
-    { nome: 'Radar da Transparência', link: '#' },
-    { nome: 'Pesquisa de Satisfação', link: '#' },
-    { nome: 'Carta de Serviços', link: '#' },
+import { 
+  Eye, 
+  FileText, 
+  Receipt, 
+  FileCheck, 
+  FileSpreadsheet, 
+  DollarSign, 
+  MessageSquare, 
+  Phone, 
+  Briefcase, 
+  Building2, 
+  Scale, 
+  BookOpen, 
+  Newspaper, 
+  Radar, 
+  ClipboardCheck, 
+  FileSearch,
+  Clock,
+  Calendar,
+  Folder,
+  Users
+} from 'lucide-vue-next'
+
+export interface Servico {
+  nome: string
+  link: string
+  icone: string
+}
+
+// Mapeamento de ícones
+const iconMap: Record<string, any> = {
+  Eye,
+  FileText,
+  Receipt,
+  FileCheck,
+  FileSpreadsheet,
+  DollarSign,
+  MessageSquare,
+  Phone,
+  Briefcase,
+  Building2,
+  Scale,
+  BookOpen,
+  Newspaper,
+  Radar,
+  ClipboardCheck,
+  FileSearch,
+  Clock,
+  Calendar,
+  Folder,
+  Users
+}
+
+export const getIcon = (iconName: string) => {
+  return iconMap[iconName] || Eye
+}
+
+export const servicosDigitais: Servico[] = [
+    { nome: 'Portal da Transparência', link: '#', icone: 'Eye' },
+    { nome: 'Processos Licitatórios', link: '#', icone: 'FileText' },
+    { nome: 'ITBI Online', link: '#', icone: 'Receipt' },
+    { nome: 'Alvará Online', link: '#', icone: 'FileCheck' },
+    { nome: 'Nota Fiscal Eletrônica', link: '#', icone: 'FileSpreadsheet' },
+    { nome: 'Tributos Web', link: '#', icone: 'DollarSign' },
+    { nome: 'Ouvidoria', link: '#', icone: 'MessageSquare' },
+    { nome: 'Fale Conosco', link: '#', icone: 'Phone' },
+    { nome: 'Concursos', link: '#', icone: 'Briefcase' },
+    { nome: 'Sala do empreendedor', link: '#', icone: 'Building2' },
+    { nome: 'Câmara Municipal', link: '#', icone: 'Scale' },
+    { nome: 'Leis Municipais Atos Oficiais', link: '#', icone: 'BookOpen' },
+    { nome: 'Diário Oficial', link: '#', icone: 'Newspaper' },
+    { nome: 'Radar da Transparência', link: '#', icone: 'Radar' },
+    { nome: 'Pesquisa de Satisfação', link: '#', icone: 'ClipboardCheck' },
+    { nome: 'Carta de Serviços', link: '#', icone: 'FileSearch' },
   ]
 
-export const servicosServidor = [
-    { nome: 'Contracheque', link: '#' },
-    { nome: 'Ponto Eletrônico', link: '#' },
-    { nome: 'Férias', link: '#' },
-    { nome: 'Licenças', link: '#' },
-    { nome: 'Documentos', link: '#' },
-    { nome: 'RH Digital', link: '#' },
+export const servicosServidor: Servico[] = [
+    { nome: 'Contracheque', link: '#', icone: 'FileSpreadsheet' },
+    { nome: 'Ponto Eletrônico', link: '#', icone: 'Clock' },
+    { nome: 'Férias', link: '#', icone: 'Calendar' },
+    { nome: 'Licenças', link: '#', icone: 'FileCheck' },
+    { nome: 'Documentos', link: '#', icone: 'Folder' },
+    { nome: 'RH Digital', link: '#', icone: 'Users' },
   ]
