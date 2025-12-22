@@ -1,8 +1,8 @@
 <template>
-  <section class="noticias  ">
+  <section ref="sectionRef" class="noticias  ">
 
-    <div class=" container px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-16">
-      <div class="text-center mb-12 sm:mb-16">
+    <div class=" container px-4 sm:px-6 lg:px-12 pt-16 sm:pt-20 lg:pt-16 xl:pt-16 opacity-0">
+      <div class="text-center  ">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
           <span class="bg-gradient-to-r from-[#076633] to-[#00984B] bg-clip-text text-transparent">
             Notícias
@@ -12,9 +12,9 @@
       </div>
     </div>
 
-    <div class="p-4 md:p-0 container pb-16 sm:pb-20 lg:pb-24">
+    <div class=" md:p-0 container pb-8 sm:pb-8 md:pb-12 lg:pb-16 xl:pb-12">
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6">
+      <div class=" p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-6 opacity-0">
         <div class="lg:col-span-8">
           <article
             class="group relative h-[250px] sm:h-[350px] lg:h-[580px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer">
@@ -50,7 +50,7 @@
             <div
               class="flex-1 h-full p-3 flex flex-col justify-center border-l-4 border-black group-hover:border-[#076633]  duration-300">
               <p
-                class="text-sm text-gray-800 font-bold leading-snug  duration-300">
+                class="text-sm text-gray-800 font-bold leading-snug line-clamp-2 duration-300">
                 Fallen carregando na fúria perde de 2×1 para Pain nas quartas de finais e são eliminados.
               </p>
             </div>
@@ -69,7 +69,7 @@
             <div
               class="flex-1 h-full p-3 flex flex-col justify-center border-l-4 border-[#076633]  duration-300">
               <p
-                class="text-sm text-gray-800 font-bold leading-snug  duration-300">
+                class="text-sm text-gray-800 font-bold leading-snug line-clamp-2 duration-300">
                 S1mple jogará hoje contra The Mongols e veremos se irá continuar no Major.
               </p>
             </div>
@@ -87,7 +87,7 @@
             <div
               class="flex-1 h-full p-3 flex flex-col justify-center border-l-4 border-blue-500  duration-300">
               <p
-                class="text-sm text-gray-800 font-bold leading-snug  group-hover:text-blue-600  duration-300">
+                class="text-sm text-gray-800 font-bold leading-snug line-clamp-2 group-hover:text-blue-600  duration-300">
                 Favorita a ser campeã do major, Vitality joga ainda hoje contra a NAVI.
               </p>
             </div>
@@ -105,7 +105,7 @@
             <div
               class="flex-1 p-3 flex flex-col justify-center border-l-4 border-purple-500  duration-300">
               <p
-                class="text-sm text-gray-800 font-bold leading-snug  group-hover:text-purple-600  duration-300">
+                class="text-sm text-gray-800 font-bold leading-snug line-clamp-2 group-hover:text-purple-600  duration-300">
                 Donk não consegue avançar com a Spirit e perde para a Mouz nas quartas de finais.
               </p>
             </div>
@@ -116,3 +116,11 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useScrollAnimation } from '../../composables/useScrollAnimation'
+
+const sectionRef = ref<HTMLElement | null>(null)
+useScrollAnimation(sectionRef)
+</script>

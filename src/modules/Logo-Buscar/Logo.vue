@@ -1,8 +1,8 @@
 <template>
-  <section class="primary   animate-slide-in-left">
+  <section class="primary">
     
-    <div class="container pb-5 flex justify-between items-center flex-col gap-4 md:flex-row md:gap-0
-             animate-slide-in-left opacity-0 delay-100">
+    <div ref="logoRef" class="container px-4  pb-5 flex justify-between items-center flex-col gap-4 md:flex-row md:gap-0
+             opacity-0">
 
       <div class="flex items-center gap-4 md:gap-6 w-full md:w-auto justify-center">
 
@@ -28,7 +28,7 @@
       <div class="flex flex-col gap-3 w-full md:w-auto justify-center flex items-center">
         <div class="flex items-center gap-3 justify-center">
 
-          <input class="hidden xs:block w-[15rem] xs:w-[18rem] md:w-[22rem] rounded-lg p-3 white items-centertransition-all 
+          <input class="hidden xs:block w-[15rem] xs:w-[18rem] md:w-[16rem] lg:w-[22rem] rounded-lg p-3 white items-centertransition-all 
                focus:ring-2 focus:ring-white/70" type="text" placeholder="O que você busca ?">
 
           <button type="button" class="xs:hidden inline-flex items-center justify-center p-2 w-10 h-10 
@@ -52,7 +52,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import LupaIcon from './components/Lupa.vue'
 import MenuIcon from './components/Menu.vue'
 
@@ -65,4 +65,14 @@ const toggleMenu = () => {
 }
 
 const isSearchOpen = ref(false)
+const logoRef = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  if (logoRef.value) {
+    setTimeout(() => {
+      logoRef.value?.classList.add('animate-slide-in-left')
+      logoRef.value?.classList.remove('opacity-0')
+    }, 150)
+  }
+})
 </script>

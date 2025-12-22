@@ -1,7 +1,7 @@
 <template>
-  <section class="acesso-rapido">
+  <section ref="sectionRef" class="acesso-rapido">
     <div class=" container pt-16 flex justify-center">
-      <h1 class="text-4xl text-[#118D4E] animate-slide-in-left opacity-0 delay-400">
+      <h1 class="text-4xl text-[#118D4E] opacity-0">
         ACESSO <strong class="text-[#076633]">RÁPIDO</strong>
       </h1>
     </div>
@@ -28,7 +28,7 @@
     
 
     <div class=" container">
-      <div class="p-4 bg-gray-100 sm:p-6 md:p-8 rounded-b-lg mx-4 animate-slide-in-left opacity-0 delay-700">
+      <div class="p-4 bg-gray-100 sm:p-6 md:p-8 rounded-b-lg mx-4 opacity-0">
         
       <div v-if="activeTab === 'digital'" class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-8 sm:gap-5 md:gap-6 ">
         <a v-for="servico in servicosDigitais" :key="servico.nome" :href="servico.link" 
@@ -62,7 +62,10 @@
 </template><script setup lang="ts">
 import { ref } from 'vue'
 import { servicosDigitais, servicosServidor, getIcon } from './types'
+import { useScrollAnimation } from '../../composables/useScrollAnimation'
 
 const activeTab = ref<'digital' | 'servidor'>('digital')
+const sectionRef = ref<HTMLElement | null>(null)
+useScrollAnimation(sectionRef)
 </script>
 

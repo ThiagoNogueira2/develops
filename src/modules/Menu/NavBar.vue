@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar secundary animate-slide-in-left opacity-0 delay-200">
+  <nav ref="navRef" class="navbar secundary opacity-0">
     <div class="container">
       <div class="flex items-center justify-between text-white p-3">
         <div class="hidden md:flex justify-around gap-4 w-full">
@@ -53,10 +53,22 @@
 </template>
 
 <script setup lang="ts">
-  //Propriedade do componente para fazer a chamada do componente no view, posteriormente será usado para chamar no componente Logo.
-  //Dentro HOME, no view, criado para abrir o valor do mobile. Assim nao precisa setar novamente os valores do componente.
+import { ref, onMounted } from 'vue'
+
+//Propriedade do componente para fazer a chamada do componente no view, posteriormente será usado para chamar no componente Logo.
+//Dentro HOME, no view, criado para abrir o valor do mobile. Assim nao precisa setar novamente os valores do componente.
 const props = defineProps<{
   isOpen: boolean
 }>()
+
+const navRef = ref<HTMLElement | null>(null)
+onMounted(() => {
+  if (navRef.value) {
+    setTimeout(() => {
+      navRef.value?.classList.add('animate-slide-in-left')
+      navRef.value?.classList.remove('opacity-0')
+    }, 250)
+  }
+})
 </script>
 

@@ -1,7 +1,7 @@
 <template>
-  <section class="servicos bg-gray-100 pt-20 pb-12 ">
-      <div class="container ">
-        <div class="p-4 md:p-0 mx-auto grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <section ref="sectionRef" class="servicos bg-gray-100 pt-12 pb-12 md:pt-16 lg:pt-20 lg:pb-20 opacity-0">
+      <div class="container px-8">
+        <div class="md:p-0 mx-auto grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <a href="#">
         <div class="cadastro-rural flex justify-center items-center">
@@ -42,3 +42,11 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useScrollAnimation } from '../../composables/useScrollAnimation'
+
+const sectionRef = ref<HTMLElement | null>(null)
+useScrollAnimation(sectionRef)
+</script>

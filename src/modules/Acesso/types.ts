@@ -27,6 +27,8 @@ export interface Servico {
   icone: string
 }
 
+
+//mapa de icones para utilizar no componente AcessoRapido.vue
 const iconMap: Record<string, any> = {
   Eye,
   FileText,
