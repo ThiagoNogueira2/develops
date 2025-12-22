@@ -48,9 +48,9 @@
             </div>
 
             <div
-              class="flex-1 h-full p-3 flex flex-col justify-center border-l-4 border-black group-hover:border-[#076633]  duration-300">
+              class="flex-1 h-full p-3 flex flex-col justify-center border-l-4 border-black group-hover:border-gray-700  duration-300">
               <p
-                class="text-sm text-gray-800 font-bold leading-snug line-clamp-2 duration-300">
+                class="text-sm text-gray-800 font-bold leading-snug line-clamp-2 group-hover:text-gray-600 duration-300">
                 Fallen carregando na fúria perde de 2×1 para Pain nas quartas de finais e são eliminados.
               </p>
             </div>
@@ -69,7 +69,7 @@
             <div
               class="flex-1 h-full p-3 flex flex-col justify-center border-l-4 border-[#076633]  duration-300">
               <p
-                class="text-sm text-gray-800 font-bold leading-snug line-clamp-2 duration-300">
+                class="text-sm text-gray-800 font-bold leading-snug line-clamp-2 group-hover:text-[#076633] duration-300">
                 S1mple jogará hoje contra The Mongols e veremos se irá continuar no Major.
               </p>
             </div>

@@ -35,16 +35,16 @@
       <div class="border-t border-gray-300 mt-4 sm:mt-6 lg:mt-7"></div>
       
       <div class="flex flex-wrap justify-center lg:justify-between items-center gap-4 sm:gap-6 text-white mt-6 sm:mt-8 text-xs sm:text-sm">
-        <div class="text-center lg:text-left order-2 lg:order-1">
+        <div class="text-center lg:text-left w-full xxs:w-auto xxs:order-2 lg:order-1">
           <p>Última atualização do site: 18/05/2025</p>
         </div>
-        <div class="text-center order-1 lg:order-2">
+        <div class="text-center xxs:order-1 lg:order-2">
           <a href="#" class="hover:underline flex items-center justify-center gap-2">
             <img src="../../assets/images/mapaSite.png" alt="Mapa do Site">
             Mapa do Site
           </a>
         </div>
-        <div class="order-3">
+        <div class="xxs:order-3">
           <img src="../../assets/images/ingadigital.png" alt="Inga Digital" class="w-14 sm:w-16 h-auto">
         </div>
       </div>
